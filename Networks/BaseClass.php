@@ -24,13 +24,15 @@ class BaseClass
         $sz = "320x480";
         $aid = "19a6c729-1e27-e936-84c1-122b2a9bbc8c";
 
+        $url = $p_url . '?' . 'ab=' . $ab . '&os=' . $adRequest->getDeviceOs() . '&ua=' . $adRequest->urlEncode($adRequest->getDeviceUa()) . '&key=' . $app_key . '&ip=' . $adRequest->getDeviceIp() . '&sz=' . $sz . '&aid=' . $aid . '&source=app&timeout=400';
+        
         // Initialize a new cURL session
         $ch = curl_init();
         // Set options for cURL session
         curl_setopt_array(
             $ch,
             array(
-                CURLOPT_URL => $p_url . '?' . 'ab=' . $ab . '&os=' . $adRequest->getDeviceOs() . '&ua=' . $adRequest->urlEncode($adRequest->getDeviceUa()) . '&key=' . $app_key . '&ip=' . $adRequest->getDeviceIp() . '&sz=' . $sz . '&aid=' . $aid . '&source=app&timeout=400',
+                CURLOPT_URL => $url,
                 CURLOPT_POST => TRUE,
                 CURLOPT_RETURNTRANSFER => TRUE,
                 CURLOPT_HTTPHEADER => array(
