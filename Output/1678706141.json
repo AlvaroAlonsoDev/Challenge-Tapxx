@@ -1,0 +1,6 @@
+{
+    "test": 0,
+    "error": 1,
+    "error-reason": "Invalid response format",
+    "ad": null
+}
