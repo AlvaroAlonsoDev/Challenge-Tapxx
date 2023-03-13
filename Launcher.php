@@ -16,7 +16,7 @@ try {
     $res = $test->Run();
 
     var_dump($res);
-    // instantiate class ApiResponse
+    // Instantiate class ApiResponse
     $response = new ApiResponse($res);
     // Save file with request information
     $myfile = $response->SaveResult();
